@@ -28,7 +28,8 @@
 8.9
 8.10
 8.10-slim
-8.11-slim 8.11
+8.11
+8.11-slim
 9
 9-slim
 9.0
@@ -67,6 +68,9 @@
 10.5-slim 10.5
 10.6
 10.6-slim
+10.7
+10.7-slim
+10.8-slim 10.8
 bullseye-20190708
 bullseye-20190708-slim
 bullseye-20190812-slim bullseye-20190812
@@ -100,8 +104,12 @@ bullseye-20200908
 bullseye-20200908-slim
 bullseye-20201012
 bullseye-20201012-slim
-bullseye-20201117 bullseye
-bullseye-20201117-slim
+bullseye-20201117-slim bullseye-20201117
+bullseye-20201209-slim bullseye-20201209
+bullseye-20210111
+bullseye-20210111-slim
+bullseye-20210208 bullseye
+bullseye-20210208-slim
 bullseye-backports
 bullseye-slim
 buster
@@ -168,6 +176,12 @@ buster-20201012
 buster-20201012-slim
 buster-20201117
 buster-20201117-slim
+buster-20201209
+buster-20201209-slim
+buster-20210111
+buster-20210111-slim
+buster-20210208
+buster-20210208-slim
 buster-backports
 buster-slim
 experimental-20170606
@@ -202,7 +216,10 @@ experimental-20200607
 experimental-20200720
 experimental-20200803
 experimental-20200908
-experimental-20201117 experimental
+experimental-20201117
+experimental-20201209
+experimental-20210111 stable-20210111
+experimental-20210208 experimental
 jessie
 jessie-20170606
 jessie-20170723
@@ -263,6 +280,12 @@ jessie-20201012 experimental-20201012
 jessie-20201012-slim
 jessie-20201117
 jessie-20201117-slim
+jessie-20201209
+jessie-20201209-slim
+jessie-20210111
+jessie-20210111-slim
+jessie-20210208
+jessie-20210208-slim
 jessie-backports jessie-20190228
 jessie-slim
 oldoldstable
@@ -324,6 +347,12 @@ oldoldstable-20201012
 oldoldstable-20201012-slim
 oldoldstable-20201117
 oldoldstable-20201117-slim
+oldoldstable-20201209
+oldoldstable-20201209-slim
+oldoldstable-20210111
+oldoldstable-20210111-slim
+oldoldstable-20210208
+oldoldstable-20210208-slim
 oldoldstable-backports
 oldoldstable-slim
 oldstable latest
@@ -385,7 +414,12 @@ oldstable-20200908-slim
 oldstable-20201012
 oldstable-20201012-slim
 oldstable-20201117
-oldstable-20201117-slim
+oldstable-20201209
+oldstable-20201209-slim
+oldstable-20210111
+oldstable-20210111-slim
+oldstable-20210208
+oldstable-20210208-slim
 oldstable-backports
 oldstable-slim
 rc-buggy
@@ -426,7 +460,10 @@ rc-buggy-20200720
 rc-buggy-20200803 oldstable-20200803-slim
 rc-buggy-20200908
 rc-buggy-20201012
-rc-buggy-20201117
+rc-buggy-20201117 oldstable-20201117-slim
+rc-buggy-20201209
+rc-buggy-20210111
+rc-buggy-20210208
 sid
 sid-20170606
 sid-20170620
@@ -489,7 +526,13 @@ sid-20200908-slim
 sid-20201012
 sid-20201012-slim
 sid-20201117
-sid-slim sid-20201117-slim
+sid-20201117-slim
+sid-20201209
+sid-20201209-slim
+sid-20210111
+sid-20210111-slim
+sid-20210208
+sid-slim sid-20210208-slim
 stable
 stable-20170606
 stable-20170620
@@ -552,6 +595,11 @@ stable-20200908-slim stable-20200908
 stable-20201012-slim stable-20201012
 stable-20201117
 stable-20201117-slim
+stable-20201209
+stable-20201209-slim
+stable-20210111-slim
+stable-20210208
+stable-20210208-slim
 stable-backports
 stable-slim
 stretch
@@ -616,6 +664,11 @@ stretch-20201012
 stretch-20201012-slim
 stretch-20201117
 stretch-20201117-slim
+stretch-20201209
+stretch-20201209-slim
+stretch-20210111-slim stretch-20210111
+stretch-20210208
+stretch-20210208-slim
 stretch-slim stretch-backports
 testing
 testing-20170606
@@ -681,6 +734,11 @@ testing-20201012
 testing-20201012-slim
 testing-20201117
 testing-20201117-slim
+testing-20201209-slim testing-20201209
+testing-20210111
+testing-20210111-slim
+testing-20210208
+testing-20210208-slim
 testing-backports
 testing-slim
 unstable
@@ -742,8 +800,13 @@ unstable-20200908
 unstable-20200908-slim
 unstable-20201012
 unstable-20201012-slim
-unstable-20201117
-unstable-20201117-slim
+unstable-20201117-slim unstable-20201117
+unstable-20201209
+unstable-20201209-slim
+unstable-20210111
+unstable-20210111-slim
+unstable-20210208
+unstable-20210208-slim
 wheezy
 wheezy-20170606
 wheezy-20170620 unstable-20170620
