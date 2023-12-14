@@ -50,7 +50,8 @@
 9.12-slim 9.12
 9.13
 9.13-slim
-10-slim 10
+10
+10-slim
 10.0
 10.0-slim
 10.1
@@ -67,19 +68,27 @@
 10.7-slim 10.7
 10.8-slim 10.8
 10.9-slim 10.9
-10.10
-10.10-slim
-11
-11-slim
+10.10-slim 10.10
+10.11
+10.11-slim
+11-slim 11
 11.0
 11.0-slim
+11.1
+11.1-slim
 bookworm
 bookworm-20210816
 bookworm-20210816-slim
 bookworm-20210902
 bookworm-20210902-slim
 bookworm-20210927
-bookworm-backports bookworm-20210927-slim
+bookworm-20210927-slim
+bookworm-20211011
+bookworm-20211011-slim
+bookworm-20211115
+bookworm-20211115-slim
+bookworm-20211201
+bookworm-backports bookworm-20211201-slim
 bookworm-slim
 bullseye
 bullseye-20190708
@@ -140,6 +149,11 @@ bullseye-20210816-slim
 bullseye-20210902-slim bullseye-20210902
 bullseye-20210927
 bullseye-20210927-slim
+bullseye-20211011
+bullseye-20211011-slim
+bullseye-20211115-slim bullseye-20211115
+bullseye-20211201
+bullseye-20211201-slim
 bullseye-backports
 bullseye-slim
 buster
@@ -226,7 +240,13 @@ buster-20210816-slim
 buster-20210902
 buster-20210902-slim
 buster-20210927
-buster-backports buster-20210927-slim
+buster-20210927-slim
+buster-20211011
+buster-20211011-slim
+buster-20211115
+buster-20211115-slim
+buster-20211201
+buster-backports buster-20211201-slim
 buster-slim
 experimental
 experimental-20170606
@@ -276,7 +296,9 @@ experimental-20210621
 experimental-20210721
 experimental-20210816
 experimental-20210902
-experimental-20210927
+experimental-20211011
+experimental-20211115
+experimental-20211201
 jessie
 jessie-20170606
 jessie-20170620
@@ -414,8 +436,14 @@ oldoldstable-20210902
 oldoldstable-20210902-slim
 oldoldstable-20210927
 oldoldstable-20210927-slim
+oldoldstable-20211011
+oldoldstable-20211115
+oldoldstable-20211115-slim
+oldoldstable-20211201
+oldoldstable-20211201-slim
 oldoldstable-backports
-oldstable
+oldoldstable-slim
+oldstable latest
 oldstable-20170606
 oldstable-20170620
 oldstable-20170723
@@ -503,11 +531,17 @@ oldstable-20210816 oldoldstable-20210816-slim
 oldstable-20210816-slim
 oldstable-20210902
 oldstable-20210902-slim
-oldstable-20210927
+oldstable-20210927 experimental-20210927
 oldstable-20210927-slim
+oldstable-20211011 oldoldstable-20211011-slim
+oldstable-20211011-slim
+oldstable-20211115
+oldstable-20211115-slim
+oldstable-20211201
+oldstable-20211201-slim
 oldstable-backports
 oldstable-slim
-rc-buggy latest
+rc-buggy
 rc-buggy-20170620
 rc-buggy-20170723
 rc-buggy-20170907
@@ -559,6 +593,9 @@ rc-buggy-20210721 oldstable-20210721-slim
 rc-buggy-20210816
 rc-buggy-20210902
 rc-buggy-20210927
+rc-buggy-20211011
+rc-buggy-20211115
+rc-buggy-20211201
 sid
 sid-20170606 rc-buggy-20170606
 sid-20170620
@@ -644,7 +681,12 @@ sid-20210902
 sid-20210902-slim
 sid-20210927
 sid-20210927-slim
-sid-slim
+sid-20211011
+sid-20211011-slim
+sid-20211115
+sid-20211115-slim
+sid-20211201
+sid-slim sid-20211201-slim
 squeeze
 stable
 stable-20170606
@@ -731,8 +773,14 @@ stable-20210816-slim
 stable-20210902-slim stable-20210902
 stable-20210927
 stable-20210927-slim
-stable-slim stable-backports
-stretch oldoldstable-slim
+stable-20211011
+stable-20211011-slim
+stable-20211115-slim stable-20211115
+stable-20211201
+stable-20211201-slim
+stable-backports
+stable-slim
+stretch
 stretch-20170606
 stretch-20170620
 stretch-20170723
@@ -819,8 +867,13 @@ stretch-20210902
 stretch-20210902-slim
 stretch-20210927
 stretch-20210927-slim
-stretch-backports
-stretch-slim
+stretch-20211011
+stretch-20211011-slim
+stretch-20211115
+stretch-20211115-slim
+stretch-20211201
+stretch-20211201-slim
+stretch-slim stretch-backports
 testing
 testing-20170606
 testing-20170620
@@ -906,6 +959,11 @@ testing-20210902
 testing-20210902-slim
 testing-20210927
 testing-20210927-slim
+testing-20211011-slim testing-20211011
+testing-20211115
+testing-20211115-slim
+testing-20211201
+testing-20211201-slim
 testing-backports
 testing-slim
 unstable
@@ -994,8 +1052,13 @@ unstable-20210816
 unstable-20210816-slim
 unstable-20210902
 unstable-20210902-slim
-unstable-20210927
-unstable-20210927-slim
+unstable-20210927-slim unstable-20210927
+unstable-20211011
+unstable-20211011-slim
+unstable-20211115
+unstable-20211115-slim
+unstable-20211201
+unstable-20211201-slim
 wheezy
 wheezy-20170606
 wheezy-20170723
