@@ -231,7 +231,7 @@ SKIP_IMAGES_SCAN=${SKIP_IMAGES_SCAN-}
 MINOR_IMAGES="(golang|mariadb|memcached|mongo|mysql|nginx|node|php|postgres|python|rabbitmq|redis|redmine|ruby|solr)"
 SKIP_MINOR_OS="$MINOR_IMAGES:.*alpine[0-9].*"
 SKIP_MINOR="$MINOR_IMAGES:.*[0-9]+\.([0-9]+\.)[0-9]+(-32bit.*)?"
-SKIP_PRE="((redis|node|ruby|php|golang|python|mariadb|mysql|postgres|solr|elasticsearch|mongo|rabbitmq):.*(alpha|beta|rc)[0-9]*(-32bit.*)?)"
+SKIP_PRE="((redis|node|ruby|php|golang|python|mariadb|mysql|postgres|solr|elasticsearch|mongo|rabbitmq|opensearch):.*(alpha|beta|rc)[0-9]*(-32bit.*)?)"
 SKIP_OS="(((archlinux|suse|centos|fedora|redhat|alpine|debian|ubuntu|oldstable|oldoldstable):.*[0-9]{8}.*)"
 SKIP_OS="$SKIP_OS|((node):[0-9]+[0-9]+\.[0-9]+.*)"
 SKIP_OS="$SKIP_OS|((debian|redis):[0-9]+\.[0-9]+.*)"
@@ -253,10 +253,11 @@ SKIP_TF="(tensorflow.serving:[0-9].*)"
 SKIP_MINIO="(k8s-operator|((minio|mc):(RELEASE.)?[0-9]{4}-.{7}))"
 SKIP_MAILU="(mailu.*(feat|patch|merg|refactor|revert|upgrade|fix-|pr-template))"
 SKIP_DOCKER="docker(\/|:)([0-9]+\.[0-9]+\.|17|18.0[1-6]|1$|1(\.|-)).*"
-SKIPPED_TAGS="$SKIP_MINOR_OS|$SKIP_MINOR|$SKIP_PRE|$SKIP_OS|$SKIP_MISC"
+SKIPPED_TAGS="$SKIP_TF|$SKIP_MINOR_OS|$SKIP_NODE|$SKIP_DOCKER|$SKIP_MINIO|$SKIP_MAILU|$SKIP_MINOR|$SKIP_PRE|$SKIP_OS|$SKIP_PHP|$SKIP_WINDOWS|$SKIP_MISC"
 CURRENT_TS=$(date +%s)
 IMAGES_SKIP_NS="((mailhog|postgis|pgrouting(-bare)?|^library|dejavu|(minio/(minio|mc))))"
 
+SKIPPED_TAGS="$SKIP_MINOR_OS|$SKIP_MINOR|$SKIP_PRE|$SKIP_OS|$SKIP_MISC"
 
 default_images="
 library/debian
@@ -301,6 +302,13 @@ SKIP_REFRESH_ANCESTORS=${SKIP_REFRESH_ANCESTORS-}
 declare -A duplicated_tags
 declare -A registry_tokens
 declare -A registry_services
+declare -A postgis_alpine_vers
+postgis_alpine_vers[2.3]="2.3.11"
+postgis_alpine_vers[2.3.11]="98b4bde783d6d2cda01ac268317ef83210370253f41c9dc937adeea2aa443dc3"
+postgis_alpine_vers[2.4]="2.4.9"
+postgis_alpine_vers[2.4.9]="77ba24bf8fbbfa65881d7d24bd6379f2001fff781d6ff512590bfaf16e605288"
+postgis_alpine_vers[2.5]="2.5.5"
+postgis_alpine_vers[2.5.5]="24b15ee36f3af02015da0e92a18f9046ea0b4fd24896196c8e6c2aa8e4b56baa"
 
 is_on_build() { echo "$@" | grep -E -iq "on.*build"; }
 slashcount() { local _slashcount="$(echo "${@}"|sed -e 's![^/]!!g')";echo ${#_slashcount}; }
@@ -458,7 +466,7 @@ gen_image() {
         local df="$folder/Dockerfile.override"
         if [ -e "$df" ];then dockerfiles="$dockerfiles $df" && break;fi
     done
-    local parts="from args argspost helpers pre base post clean cleanpost extra labels labelspost"
+    local parts="from args argspost helpers pre base post postextra clean clean cleanpost extra labels labelspost"
     for order in $parts;do
         for folder in . .. ../../..;do
             local df="$folder/Dockerfile.$order"
@@ -488,11 +496,9 @@ is_skipped() {
     # fi
     return $ret
 }
-# echo $(set -x && is_skipped library/redis/3.0.4-32bit;echo $?)
-# exit 1
 
 skip_local() {
-    grep -E -v "(.\/)?local"
+    grep -E -v "(.\/)?local|\.git|docker-pgrouting|docker-postgis"
 }
 
 #  get_namespace_tag libary/foo/bar : get image tag with its final namespace
