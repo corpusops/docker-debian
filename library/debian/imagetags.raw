@@ -141,6 +141,10 @@ bookworm-20220912
 bookworm-20220912-slim
 bookworm-20221004
 bookworm-20221004-slim
+bookworm-20221024
+bookworm-20221024-slim
+bookworm-20221114
+bookworm-20221114-slim
 bookworm-backports
 bookworm-slim
 bullseye
@@ -242,6 +246,10 @@ bullseye-20220912
 bullseye-20220912-slim
 bullseye-20221004
 bullseye-20221004-slim
+bullseye-20221024
+bullseye-20221024-slim
+bullseye-20221114
+bullseye-20221114-slim
 bullseye-backports
 bullseye-slim
 buster
@@ -372,6 +380,10 @@ buster-20220912
 buster-20220912-slim
 buster-20221004
 buster-20221004-slim
+buster-20221024
+buster-20221024-slim
+buster-20221114
+buster-20221114-slim
 buster-backports
 buster-slim
 experimental
@@ -445,6 +457,8 @@ experimental-20220801
 experimental-20220822
 experimental-20220912
 experimental-20221004
+experimental-20221024
+experimental-20221114
 jessie
 jessie-20170606
 jessie-20170620
@@ -760,6 +774,10 @@ oldstable-20220912
 oldstable-20220912-slim
 oldstable-20221004
 oldstable-20221004-slim
+oldstable-20221024
+oldstable-20221024-slim
+oldstable-20221114
+oldstable-20221114-slim
 oldstable-backports
 oldstable-slim
 rc-buggy
@@ -833,6 +851,8 @@ rc-buggy-20220801
 rc-buggy-20220822
 rc-buggy-20220912
 rc-buggy-20221004
+rc-buggy-20221024
+rc-buggy-20221114
 sid
 sid-20170606
 sid-20170620
@@ -962,6 +982,10 @@ sid-20220912
 sid-20220912-slim
 sid-20221004
 sid-20221004-slim
+sid-20221024
+sid-20221024-slim
+sid-20221114
+sid-20221114-slim
 sid-slim
 squeeze
 stable
@@ -1093,6 +1117,10 @@ stable-20220912
 stable-20220912-slim
 stable-20221004
 stable-20221004-slim
+stable-20221024
+stable-20221024-slim
+stable-20221114
+stable-20221114-slim
 stable-backports
 stable-slim
 stretch
@@ -1345,6 +1373,10 @@ testing-20220912
 testing-20220912-slim
 testing-20221004
 testing-20221004-slim
+testing-20221024
+testing-20221024-slim
+testing-20221114
+testing-20221114-slim
 testing-backports
 testing-slim
 unstable
@@ -1476,6 +1508,10 @@ unstable-20220912
 unstable-20220912-slim
 unstable-20221004
 unstable-20221004-slim
+unstable-20221024
+unstable-20221024-slim
+unstable-20221114
+unstable-20221114-slim
 unstable-slim
 wheezy
 wheezy-20170606
