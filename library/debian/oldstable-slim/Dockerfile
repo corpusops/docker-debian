@@ -1,4 +1,4 @@
-FROM library/debian:oldstable-slim
+FROM library/debian:oldstable-slim AS final
 ARG DO_UPDATE=y
 ARG NONINTERACTIVE=y
 ARG DEBIAN_FRONTEND=noninteractive

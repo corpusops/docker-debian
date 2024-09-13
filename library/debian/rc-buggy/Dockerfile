@@ -1,4 +1,4 @@
-FROM library/debian:rc-buggy
+FROM library/debian:rc-buggy AS final
 ARG DO_UPDATE=y
 ARG NONINTERACTIVE=y
 ARG DEBIAN_FRONTEND=noninteractive

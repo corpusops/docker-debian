@@ -1,4 +1,4 @@
-FROM library/debian:bookworm-slim
+FROM library/debian:bookworm-slim AS final
 ARG DO_UPDATE=y
 ARG NONINTERACTIVE=y
 ARG DEBIAN_FRONTEND=noninteractive

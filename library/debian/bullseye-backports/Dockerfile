@@ -1,4 +1,4 @@
-FROM library/debian:bullseye-backports
+FROM library/debian:bullseye-backports AS final
 ARG DO_UPDATE=y
 ARG NONINTERACTIVE=y
 ARG DEBIAN_FRONTEND=noninteractive

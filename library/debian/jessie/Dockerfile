@@ -1,4 +1,4 @@
-FROM library/debian:jessie
+FROM library/debian:jessie AS final
 ARG DO_UPDATE=y
 ARG NONINTERACTIVE=y
 ARG DEBIAN_FRONTEND=noninteractive

@@ -1,4 +1,4 @@
-FROM library/debian:latest
+FROM library/debian:latest AS final
 ARG DO_UPDATE=y
 ARG NONINTERACTIVE=y
 ARG DEBIAN_FRONTEND=noninteractive

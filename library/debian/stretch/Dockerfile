@@ -1,4 +1,4 @@
-FROM library/debian:stretch
+FROM library/debian:stretch AS final
 ARG DO_UPDATE=y
 ARG NONINTERACTIVE=y
 ARG DEBIAN_FRONTEND=noninteractive

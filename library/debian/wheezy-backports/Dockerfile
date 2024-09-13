@@ -1,4 +1,4 @@
-FROM library/debian:wheezy-backports
+FROM library/debian:wheezy-backports AS final
 ARG DO_UPDATE=y
 ARG NONINTERACTIVE=y
 ARG DEBIAN_FRONTEND=noninteractive

@@ -1,4 +1,4 @@
-FROM library/debian:sid-slim
+FROM library/debian:sid-slim AS final
 ARG DO_UPDATE=y
 ARG NONINTERACTIVE=y
 ARG DEBIAN_FRONTEND=noninteractive

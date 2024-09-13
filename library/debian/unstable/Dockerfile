@@ -1,4 +1,4 @@
-FROM library/debian:unstable
+FROM library/debian:unstable AS final
 ARG DO_UPDATE=y
 ARG NONINTERACTIVE=y
 ARG DEBIAN_FRONTEND=noninteractive

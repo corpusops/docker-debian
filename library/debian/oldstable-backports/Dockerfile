@@ -1,4 +1,4 @@
-FROM library/debian:oldstable-backports
+FROM library/debian:oldstable-backports AS final
 ARG DO_UPDATE=y
 ARG NONINTERACTIVE=y
 ARG DEBIAN_FRONTEND=noninteractive

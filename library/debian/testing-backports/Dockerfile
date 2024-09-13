@@ -1,4 +1,4 @@
-FROM library/debian:testing-backports
+FROM library/debian:testing-backports AS final
 ARG DO_UPDATE=y
 ARG NONINTERACTIVE=y
 ARG DEBIAN_FRONTEND=noninteractive

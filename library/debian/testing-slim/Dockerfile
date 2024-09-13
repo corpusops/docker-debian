@@ -1,4 +1,4 @@
-FROM library/debian:testing-slim
+FROM library/debian:testing-slim AS final
 ARG DO_UPDATE=y
 ARG NONINTERACTIVE=y
 ARG DEBIAN_FRONTEND=noninteractive

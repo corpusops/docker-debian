@@ -1,4 +1,4 @@
-FROM library/debian:sid
+FROM library/debian:sid AS final
 ARG DO_UPDATE=y
 ARG NONINTERACTIVE=y
 ARG DEBIAN_FRONTEND=noninteractive

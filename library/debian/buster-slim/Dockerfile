@@ -1,4 +1,4 @@
-FROM library/debian:buster-slim
+FROM library/debian:buster-slim AS final
 ARG DO_UPDATE=y
 ARG NONINTERACTIVE=y
 ARG DEBIAN_FRONTEND=noninteractive

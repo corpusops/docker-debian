@@ -1,4 +1,4 @@
-FROM library/debian:7-slim
+FROM library/debian:7-slim AS final
 ARG DO_UPDATE=y
 ARG NONINTERACTIVE=y
 ARG DEBIAN_FRONTEND=noninteractive
