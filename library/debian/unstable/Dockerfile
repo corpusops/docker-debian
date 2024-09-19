@@ -1,3 +1,6 @@
+ARG ANCESTOR=library/debian:unstable
+ARG RSYNC=corpusops/rsync
+FROM $RSYNC AS squashed-rsync
 FROM library/debian:unstable AS final
 ARG DO_UPDATE=y
 ARG NONINTERACTIVE=y
@@ -83,15 +86,12 @@ RUN sh -c 'set -ex \
     && ./${_cops_SYSTEM}_clean.sh \
     && ./common_clean.sh \
     && cd / && rm -rf /tmp/corpusopssteroids /var/cache/apk/* /var/lib/apt/lists/*'
-ADD helpers/system_detect.sh helpers/*_clean.sh /tmp/corpusopssteroids/
-RUN sh -c 'set -ex \
-    && echo fixperms >&2 \
-    && ( chmod -vf g-wx,o-wx /etc/logrotate.d/* /etc/logrotate.conf || true ) \
-    && echo cleanup >&2 \
-    && cd /tmp/corpusopssteroids \
-    && chmod +x *sh \
-    && _cops_SYSTEM=$(./system_detect.sh) \
-    && ./${_cops_SYSTEM}_clean.sh \
-    && ./common_clean.sh \
-    && cd / && rm -rf /tmp/corpusopssteroids /var/cache/apk/* /var/lib/apt/lists/*'
+FROM $ANCESTOR AS squashed-ancestor
+ARG ROOTFS="/BASE_ROOTFS_TO_COPY_THAT_WONT_COLLIDE_1234567890"
+ARG PATH="${ROOTFS}_rsync/bin:$PATH"
+SHELL ["busybox",  "sh", "-c"]
+RUN --mount=type=bind,from=final,target=$ROOTFS --mount=type=bind,from=squashed-rsync,target=${ROOTFS}_rsync \
+rsync -Aaz --delete ${ROOTFS}/ / --exclude=/proc --exclude=/sys --exclude=/etc/resolv.conf --exclude=/etc/hosts --exclude=$ROOTFS* --exclude=dev/shm --exclude=dev/pts --exclude=dev/mqueue
+SHELL ["/bin/sh", "-c"]
+ARG DOCKER_IMAGES_COMMIT="$DOCKER_IMAGES_COMMIT"
 LABEL com.github.corpusops.docker-images-commit="$DOCKER_IMAGES_COMMIT"
