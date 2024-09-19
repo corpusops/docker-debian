@@ -260,7 +260,7 @@ SKIPPED_TAGS="$SKIP_TF|$SKIP_MINOR_OS|$SKIP_NODE|$SKIP_DOCKER|$SKIP_MINIO|$SKIP_
 CURRENT_TS=$(date +%s)
 IMAGES_SKIP_NS="((mailhog|postgis|pgrouting(-bare)?|^library|dejavu|(minio/(minio|mc))))"
 
-SKIPPED_TAGS="$SKIP_MINOR_OS|$SKIP_MINOR|$SKIP_PRE|$SKIP_OS|$SKIP_MISC|debian:([789]|(buster)-backports|(.*(buggy|experimental|stretch|jessie|wheezy).*))"
+SKIPPED_TAGS="$SKIP_MINOR_OS|$SKIP_MINOR|$SKIP_PRE|$SKIP_OS|$SKIP_MISC|debian:([789]|(buster)-backports|(.*(oldoldstable-backports|buggy|experimental|stretch|jessie|wheezy).*))"
 
 default_images="
 library/debian
