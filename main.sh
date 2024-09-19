@@ -260,7 +260,7 @@ SKIPPED_TAGS="$SKIP_TF|$SKIP_MINOR_OS|$SKIP_NODE|$SKIP_DOCKER|$SKIP_MINIO|$SKIP_
 CURRENT_TS=$(date +%s)
 IMAGES_SKIP_NS="((mailhog|postgis|pgrouting(-bare)?|^library|dejavu|(minio/(minio|mc))))"
 
-SKIPPED_TAGS="$SKIP_MINOR_OS|$SKIP_MINOR|$SKIP_PRE|$SKIP_OS|$SKIP_MISC"
+SKIPPED_TAGS="$SKIP_MINOR_OS|$SKIP_MINOR|$SKIP_PRE|$SKIP_OS|$SKIP_MISC|debian:([789]|(.*(buggy|experimental|stretch|jessie|wheezy).*))"
 
 default_images="
 library/debian
@@ -286,19 +286,28 @@ find_top_node() { (set +e && find_top_node_ && set -e;); }
 NODE_TOP="$(echo $(find_top_node))"
 MAILU_VERSiON=1.7
 
+
+UNSUPPORTED_BATCHED_IMAGES="\
+ library/debian/7-slim\
+ library/debian/8-slim\
+ library/debian/7\
+ library/debian/8\
+ library/debian/9\
+ library/debian/9-slim\
+"
 BATCHED_IMAGES="\
+library/debian/10\
+ library/debian/10-slim\
+ library/debian/11\
+ library/debian/11-slim\
+ library/debian/12\
+ library/debian/12-slim::7
 library/debian/latest\
  library/debian/slim\
  library/debian/sid\
  library/debian/sid-slim\
- library/debian/9\
- library/debian/9-slim\
  library/debian/stable\
- library/debian/stable-slim\
- library/debian/7-slim\
- library/debian/8-slim\
- library/debian/7\
- library/debian/8::7
+ library/debian/stable-slim::7     
 "
 SKIP_REFRESH_ANCESTORS=${SKIP_REFRESH_ANCESTORS-}
 
