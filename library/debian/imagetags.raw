@@ -153,6 +153,8 @@ bookworm-20221219
 bookworm-20221219-slim
 bookworm-20230109
 bookworm-20230109-slim
+bookworm-20230202
+bookworm-20230202-slim
 bookworm-backports
 bookworm-slim
 bullseye
@@ -264,6 +266,8 @@ bullseye-20221219
 bullseye-20221219-slim
 bullseye-20230109
 bullseye-20230109-slim
+bullseye-20230202
+bullseye-20230202-slim
 bullseye-backports
 bullseye-slim
 buster
@@ -404,6 +408,8 @@ buster-20221219
 buster-20221219-slim
 buster-20230109
 buster-20230109-slim
+buster-20230202
+buster-20230202-slim
 buster-backports
 buster-slim
 experimental
@@ -482,6 +488,7 @@ experimental-20221114
 experimental-20221205
 experimental-20221219
 experimental-20230109
+experimental-20230202
 jessie
 jessie-20170606
 jessie-20170620
@@ -807,6 +814,8 @@ oldstable-20221219
 oldstable-20221219-slim
 oldstable-20230109
 oldstable-20230109-slim
+oldstable-20230202
+oldstable-20230202-slim
 oldstable-backports
 oldstable-slim
 rc-buggy
@@ -885,6 +894,7 @@ rc-buggy-20221114
 rc-buggy-20221205
 rc-buggy-20221219
 rc-buggy-20230109
+rc-buggy-20230202
 sid
 sid-20170606
 sid-20170620
@@ -1024,6 +1034,8 @@ sid-20221219
 sid-20221219-slim
 sid-20230109
 sid-20230109-slim
+sid-20230202
+sid-20230202-slim
 sid-slim
 squeeze
 stable
@@ -1165,6 +1177,8 @@ stable-20221219
 stable-20221219-slim
 stable-20230109
 stable-20230109-slim
+stable-20230202
+stable-20230202-slim
 stable-backports
 stable-slim
 stretch
@@ -1427,6 +1441,8 @@ testing-20221219
 testing-20221219-slim
 testing-20230109
 testing-20230109-slim
+testing-20230202
+testing-20230202-slim
 testing-backports
 testing-slim
 unstable
@@ -1568,6 +1584,8 @@ unstable-20221219
 unstable-20221219-slim
 unstable-20230109
 unstable-20230109-slim
+unstable-20230202
+unstable-20230202-slim
 unstable-slim
 wheezy
 wheezy-20170606
