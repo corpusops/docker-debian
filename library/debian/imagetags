@@ -8,6 +8,8 @@
 10-slim
 11
 11-slim
+12
+12-slim
 bookworm
 bookworm-backports
 bookworm-slim
@@ -40,6 +42,9 @@ stretch-slim
 testing
 testing-backports
 testing-slim
+trixie
+trixie-backports
+trixie-slim
 unstable
 unstable-slim
 wheezy

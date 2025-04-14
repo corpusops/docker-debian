@@ -572,7 +572,7 @@ get_image_tags() {
                 for flavor in "" \
                     alpine alpine3.13 alpine3.14 alpine3.15 alpine3.16 alpine3.5 \
                     trusty xenial bionic focal jammy \
-                    bullseye stretch buster jessie \
+                    bookworm bullseye stretch buster jessie \
                     ;do
                     selected=""
                     if [[ -z "$flavor" ]];then
