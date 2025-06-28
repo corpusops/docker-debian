@@ -65,8 +65,8 @@ jobs:
       fail-fast: false
       matrix:
         IMAGES:
-        - "library/debian/latest library/debian/sid library/debian/sid-slim library/debian/9 library/debian/9-slim library/debian/stable library/debian/stable-slim"
-        - "library/debian/7-slim library/debian/8-slim library/debian/7 library/debian/8"
+        - "library/debian/10 library/debian/10-slim library/debian/11 library/debian/11-slim library/debian/12 library/debian/12-slim"
+        - "library/debian/latest library/debian/sid library/debian/sid-slim library/debian/stable library/debian/stable-slim"
         #- "corpusops/test/a corpusops/test/b corpusops/test/c"
         # all images that werent explicitly told to be built would be built in the next batches
         # we span them onto N jobs
